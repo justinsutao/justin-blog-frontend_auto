@@ -107,15 +107,14 @@ export default {
   methods: {
     async formSubmit() {
       // console.log(this.formModel);
-      // axios.post('http://localhost:1337/contacts',this.formModel)
       try {
         const { data } = await axios({
           method: "POST",
-          url: `${GRIDSOME_API_URL}/contacts`,
+          url: `${this.GRIDSOME_API_URL}/contacts`,
           data: this.formModel
         })
-        console.log(data);
         window.alert('提交成功')
+        window.location.reload()
       } catch (error) {
         console.log(error);
       }
