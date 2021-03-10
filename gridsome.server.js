@@ -17,17 +17,17 @@ module.exports = function (api) {
   //     component:'./src/templates/justinSu.vue'
   //   })
   // })
-  api.loadSource(async actions => {
-    const collection = actions.addCollection('Post')
+  // api.loadSource(async actions => {
+  //   const collection = actions.addCollection('Post')
 
-    const { data } = await axios.get('https://jsonplaceholder.typicode.com/posts')
+  //   const { data } = await axios.get('https://jsonplaceholder.typicode.com/posts')
 
-    for (const item of data) {
-      collection.addNode({
-        id: item.id,
-        title: item.title,
-        content: item.body
-      })
-    }
-  })
+  //   for (const item of data) {
+  //     collection.addNode({
+  //       id: item.id,
+  //       title: item.title,
+  //       content: item.body
+  //     })
+  //   }
+  // })
 }
